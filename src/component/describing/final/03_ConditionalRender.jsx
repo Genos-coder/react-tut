@@ -26,6 +26,6 @@ function ConditionalRender() {
       isRetired: true,
     },
   ];
-  return <div> </div>;
+  return <div></div>;
 }
 export default ConditionalRender;
