@@ -1,0 +1,142 @@
+/* Container for all product cards */
+.product-container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive column widths */
+    padding: 2rem;
+    gap: 1.5rem; /* Increased gap for better spacing */
+  }
+  
+  /* Individual card styling */
+  .card {
+    position: relative;
+    border: 2px solid #ccc; /* Softer border color */
+    border-radius: 1rem;
+    background-color: #fff; /* Ensure consistent background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+  }
+  
+  .card:hover {
+    transform: translateY(-5px); /* Lift on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  }
+  
+  /* Card image styling */
+  .card-image {
+    width: 100%;
+    height: 200px; /* Fixed height for uniformity */
+    border-radius: 0.5rem;
+    object-fit: cover; /* Ensures the image scales properly */
+    margin-bottom: 1rem;
+  }
+  
+  /* Card title styling */
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  
+  /* Card description styling */
+  .card-description {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  /* Card price styling */
+  .card-price {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  /* Card quantity styling */
+  .card-quantity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .card-quantity p {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  /* SVG icon container */
+  .image-card {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 3;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    backdrop-filter: blur(5px); /* Glass effect */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .product-container {
+      padding: 1rem;
+      gap: 1rem;
+    }
+  
+    .card {
+      padding: 1rem;
+    }
+  
+    .card-image {
+      height: 150px;
+    }
+  
+    .card-title {
+      font-size: 1.1rem;
+    }
+  
+    .card-description {
+      font-size: 0.9rem;
+    }
+  
+    .card-price {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card-title {
+      font-size: 1rem;
+    }
+  
+    .card-description {
+      font-size: 0.8rem;
+    }
+  
+    .card-price {
+      font-size: 0.8rem;
+    }
+  
+    .card-image {
+      height: 120px;
+    }
+  }
+  
